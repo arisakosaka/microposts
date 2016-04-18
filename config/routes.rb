@@ -5,14 +5,10 @@ Rails.application.routes.draw do
   post   'login' , to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
   get    'setting' , to: 'sessions#edit'
-
-
-<<<<<<< HEAD
-  resources :microposts
-=======
+  
   resources :users
   resources :sessions, only: [:new, :create, :destroy, :edit, :update]
->>>>>>> user-profile
+  resources :microposts
 end
 
   # The priority is based upon order of creation: first created -> highest priority.
